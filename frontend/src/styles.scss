@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #7C3AED;    /* Morado vibrante */
+  --secondary-color: #5B21B6;  /* Morado oscuro */
+  --accent-color: #A78BFA;     /* Morado claro */
+  --gradient-start: #7C3AED;
+  --gradient-end: #C4B5FD;
+  --text-color: #1F1F1F;
+  --light-text: #6B7280;
+  --background-color: #ffffff;
+  --light-background: #F5F3FF;
+  --card-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.1), 0 2px 4px -1px rgba(124, 58, 237, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  &:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+  }
+}
+
+.btn-secondary {
+  background: var(--light-background);
+  color: var(--primary-color);
+  &:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+  }
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
