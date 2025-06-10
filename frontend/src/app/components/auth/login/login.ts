@@ -9,7 +9,12 @@ import { RouterLink } from '@angular/router';
   template: `
     <div class="auth-container">
       <div class="auth-card">
-        <h2>Iniciar Sesión</h2>
+        <div class="auth-header">
+          <a routerLink="/" class="back-to-menu-btn">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+          <h2>Iniciar Sesión</h2>
+        </div>
         <form class="auth-form">
           <div class="form-group">
             <label for="email">Correo Electrónico</label>
@@ -45,13 +50,47 @@ import { RouterLink } from '@angular/router';
       box-shadow: var(--card-shadow);
       width: 100%;
       max-width: 400px;
+      position: relative;
     }
 
-    .auth-card h2 {
-      text-align: center;
-      color: var(--primary-color);
+    .auth-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       margin-bottom: 2rem;
+    }
+
+    .auth-header h2 {
+      margin: 0;
       font-size: 2rem;
+      color: var(--primary-color);
+      flex: 1;
+      text-align: left;
+    }
+
+    .back-to-menu-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary-light, #e3e8f0);
+      color: var(--primary-color, #1a237e);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .back-to-menu-btn:hover {
+      background: var(--primary-dark, #3949ab);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(26,35,126,0.15);
+    }
+
+    .back-to-menu-btn i {
+      font-size: 1.1rem;
     }
 
     .auth-form {
