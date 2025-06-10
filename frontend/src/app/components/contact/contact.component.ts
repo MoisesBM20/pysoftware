@@ -31,4 +31,4 @@ import { NavbarComponent } from '../shared/navbar/navbar';
     }
   `]
 })
-export class ContactComponent {} 
+export class ContactComponent {}
